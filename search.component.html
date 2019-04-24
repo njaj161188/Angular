@@ -1,0 +1,27 @@
+
+<form>
+<div class="form-group">
+   <input type="text" class="form-control" [(ngModel)]="inputSearch" [ngModelOptions]="{standalone: true}" placeholder="Numtra/IflowId" />
+ </div>
+ <button type="submit" class="btn btn-primary" (click)="search()">Submit</button>  
+</form>
+   
+<div *ngIf="!collapseGrid">  
+ <div>  
+   <ag-grid-angular #agGrid style=" width: 15%; height: 150px; margin:1px; margin-left:35%"
+   class="ag-theme-balham" 
+   [gridOptions]="gridOptions" 
+   [columnDefs]="columnDefs" 
+   [rowData]="rowData" 
+   sortable=true
+   filter=true
+   (rowClicked)="onRowClicked($event)"
+   (cellFocused)="onCellFocused($event)"></ag-grid-angular>
+ </div>
+</div>
+
+<div *ngIf="finalNumtra!=''">
+   <div>
+
+   </div>
+</div>

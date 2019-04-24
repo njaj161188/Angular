@@ -1,0 +1,13 @@
+.address-card {
+    border: 1px greenyellow;
+    padding: 15px
+}
+
+.name {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.phone {
+    
+}

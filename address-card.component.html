@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Name : </h3><h5 class="card-title">{{user.name}}</h5>
+    <h3 class="card-title">Title : </h3><h5 class="card-title">{{user.title}}</h5>
+    <h3 class="card-titile">Numtra ID: </h3><h5 class="card-title">{{trade}}</h5>
+    <button *ngIf="isCollapsed" (click)="toggleCollapsed()">Expand</button> 
+    <button *ngIf="!isCollapsed" (click)="toggleCollapsed()">Collapse</button> 
+    <div *ngIf="!isCollapsed">
+        <h3 class="card-title">Address : </h3><p class="card-text">{{user.address}}</p>
+        <div *ngIf="user.phone.length > 0">
+          <p class ="card-text">Phone:</p>    
+          <p  *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</p>
+          </div>
+    </div>
+  </div>
+</div>
